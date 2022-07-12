@@ -18,6 +18,13 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
     @apply font-semibold;
+    @apply tracking-wide;
+    @apply -mb-3;
+  }
+
+  section {
+    @apply p-v;
+    @apply p-h;
   }
 }
 
@@ -37,10 +44,16 @@
 }
 
 @layer utilities {
-  .padding {
+  .p-h {
     @apply px-6;
     @apply sm:px-10;
     @apply lg:px-20;
     @apply xl:px-40;
+  }
+
+  .p-v {
+    @apply py-6;
+    @apply md:py-12;
+    @apply 2xl:py-20;
   }
 }

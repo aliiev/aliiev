@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <nav className={ `sticky bg-neutral-900 ${ !isOpen && 'backdrop-blur bg-opacity-60' } sm:backdrop-blur sm:bg-opacity-60 border-b border-neutral-800 w-full top-0 transition-opacity` }>
-      <div className="relative flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 sm:gap-10 padding py-6">
+      <div className="relative flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 sm:gap-10 p-h py-6">
         
         {/* LOGO AND TOGGLER */}
         <div className="flex justify-between items-center shrink-0 w-full sm:w-auto">
