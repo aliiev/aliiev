@@ -25,25 +25,40 @@
   p {
     @apply text-neutral-300;
   }
-
-  section {
-    @apply p-v;
-    @apply p-h;
-  }
 }
 
 @layer components {
   .btn {
-    @apply bg-emerald-600;
     @apply rounded-md;
     @apply text-base;
     @apply sm:text-sm;
     @apply 2xl:text-base;
+    @apply text-center;
     @apply font-medium;
     @apply w-full;
     @apply md:w-auto;
     @apply px-6;
     @apply py-2.5;
+  }
+
+  .card {
+    @apply relative;
+    @apply flex;
+    @apply flex-col;
+    @apply sm:flex-row;
+    @apply lg:flex-col;
+    @apply items-start;
+    @apply sm:items-center;
+    @apply lg:items-start;
+    @apply gap-3;
+    @apply sm:gap-6;
+    @apply lg:gap-3;
+    @apply bg-neutral-800;
+    @apply backdrop-blur;
+    @apply bg-opacity-60;
+    @apply rounded-lg;
+    @apply md:rounded-xl;
+    @apply p-6;
   }
 }
 
@@ -59,5 +74,17 @@
     @apply py-6;
     @apply md:py-12;
     @apply 2xl:py-20;
+  }
+
+  .oooscillate {
+    @apply bg-[url('./resources/images/oooscillate.svg')];
+    @apply bg-no-repeat;
+    @apply bg-cover;
+  }
+
+  .bbblurry {
+    @apply bg-[url('./resources/images/bbblurry.svg')];
+    @apply bg-no-repeat;
+    @apply bg-contain;
   }
 }

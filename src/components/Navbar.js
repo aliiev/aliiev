@@ -25,7 +25,7 @@ const Navbar = () => {
   const scrollAdjusted = e => {
     let offset = document.getElementById('navbar').offsetHeight
     let elPosition = e.getBoundingClientRect().top
-    let offsetPosition = elPosition + window.pageYOffset - offset - 30
+    let offsetPosition = elPosition + window.pageYOffset - offset
 
     window.scrollTo({
       top: offsetPosition,
@@ -63,7 +63,7 @@ const Navbar = () => {
 
           {/* BUTTON */}
           <div className="w-full sm:w-auto px-6 sm:px-0">
-            <button className="btn sm:hidden lg:block">Написать мне</button>
+            <button className="btn bg-emerald-600 sm:hidden lg:block">Написать мне</button>
           </div>
           
         </div>
