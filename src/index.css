@@ -77,13 +77,13 @@
   }
 
   .oooscillate {
-    @apply bg-[url('./resources/images/oooscillate.svg')];
+    @apply bg-[url('./resources/decorators/oooscillate.svg')];
     @apply bg-no-repeat;
     @apply bg-cover;
   }
 
   .bbblurry {
-    @apply bg-[url('./resources/images/bbblurry.svg')];
+    @apply bg-[url('./resources/decorators/bbblurry.svg')];
     @apply bg-no-repeat;
     @apply bg-contain;
   }

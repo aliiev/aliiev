@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './sections/Hero'
 import About from './sections/About'
 import Projects from './sections/Projects'
+import Skills from './sections/Skills'
 
 const App = () => (
   <Router>
@@ -10,6 +11,7 @@ const App = () => (
     <Hero />
     <About />
     <Projects />
+    <Skills />
   </Router>
 )
 

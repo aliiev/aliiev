@@ -20,7 +20,7 @@ const projects = [{
 }, ]
 
 const Projects = () => (
-  <section id="projects" className="p-v">
+  <section id="projects" className="border-b border-neutral-800 p-v">
     <div className="flex justify-between items-center mb-6 lg:mb-12 p-h">
       <h3 className="text-2xl lg:text-3xl 2xl:text-5xl">Проекты</h3>
       <a className="hidden sm:flex justify-center items-center gap-2 btn border-2 border-emerald-600 text-emerald-600 fill-emerald-600 w-auto" href="https://github.com/aliiev" target="_blank" rel="noreferrer">
