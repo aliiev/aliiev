@@ -108,4 +108,9 @@
     @apply bg-no-repeat;
     @apply bg-cover;
   }
+
+  .ccchaos {
+    @apply bg-[url('./resources/decorators/ccchaos.svg')];
+    @apply bg-no-repeat;
+  }
 }
