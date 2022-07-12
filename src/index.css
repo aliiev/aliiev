@@ -30,8 +30,7 @@
 @layer components {
   .btn {
     @apply rounded-md;
-    @apply text-base;
-    @apply sm:text-sm;
+    @apply text-sm;
     @apply 2xl:text-base;
     @apply text-center;
     @apply font-medium;
@@ -39,6 +38,21 @@
     @apply md:w-auto;
     @apply px-6;
     @apply py-2.5;
+  }
+
+  .input {
+    @apply btn;
+    @apply bg-neutral-900;
+    @apply border-2;
+    @apply border-neutral-800;
+    @apply placeholder:text-neutral-500;
+    @apply text-left;
+    @apply px-4;
+  }
+
+  .input-file {
+    @apply input;
+    @apply text-neutral-500;
   }
 
   .card {
@@ -86,5 +100,12 @@
     @apply bg-[url('./resources/decorators/bbblurry.svg')];
     @apply bg-no-repeat;
     @apply bg-contain;
+  }
+
+  .gggyrate {
+    @apply bg-[url('./resources/decorators/gggyrate.svg')];
+    @apply bg-center;
+    @apply bg-no-repeat;
+    @apply bg-cover;
   }
 }

@@ -4,6 +4,7 @@ import Hero from './sections/Hero'
 import About from './sections/About'
 import Projects from './sections/Projects'
 import Skills from './sections/Skills'
+import Contacts from './sections/Contacts'
 
 const App = () => (
   <Router>
@@ -12,6 +13,7 @@ const App = () => (
     <About />
     <Projects />
     <Skills />
+    <Contacts />
   </Router>
 )
 
