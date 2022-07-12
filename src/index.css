@@ -18,8 +18,12 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
     @apply font-semibold;
+    @apply uppercase;
     @apply tracking-wide;
-    @apply -mb-3;
+  }
+
+  p {
+    @apply text-neutral-300;
   }
 
   section {
