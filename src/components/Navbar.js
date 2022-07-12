@@ -1,12 +1,41 @@
 import { useState } from 'react'
+import { HashLink } from 'react-router-hash-link'
 import Logo from '../resources/Logo.svg'
+
+const links = [{
+  title: 'Главная',
+  url: '/#hero'
+}, {
+  title: 'Обо мне',
+  url: '/#about'
+}, {
+  title: 'Проекты',
+  url: '/#projects'
+}, {
+  title: 'Навыки',
+  url: '/#skills'
+}, {
+  title: 'Контакты',
+  url: '/#contacts'
+}]
 
 const Navbar = () => {
   const [ isOpen, setOpen ] = useState(false)
 
+  const scrollAdjusted = e => {
+    let offset = document.getElementById('navbar').offsetHeight
+    let elPosition = e.getBoundingClientRect().top
+    let offsetPosition = elPosition + window.pageYOffset - offset - 30
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    })
+  }
+
   return (
-    <nav className={ `sticky bg-neutral-900 ${ !isOpen && 'backdrop-blur bg-opacity-60' } sm:backdrop-blur sm:bg-opacity-60 border-b border-neutral-800 w-full top-0 transition-opacity` }>
-      <div className="relative flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 sm:gap-10 p-h py-6">
+    <nav className={ `sticky bg-neutral-900 ${ !isOpen && 'backdrop-blur bg-opacity-60' } sm:backdrop-blur sm:bg-opacity-60 border-b border-neutral-800 w-full top-0 transition-opacity z-20` }>
+      <div id="navbar" className="relative flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 sm:gap-10 p-h py-6">
         
         {/* LOGO AND TOGGLER */}
         <div className="flex justify-between items-center shrink-0 w-full sm:w-auto">
@@ -25,9 +54,9 @@ const Navbar = () => {
           
           {/* LINKS LOOP */}
           <ul className="flex flex-col sm:flex-row justify-start items-star sm:items-center gap-4 sm:gap-8 w-full sm:w-auto text-base sm:text-sm 2xl:text-base font-medium">
-            { [ 'Главная', 'Обо мне', 'Проекты', 'Навыки', 'Контакты' ].map((link, i) => (
+            { links.map((link, i) => (
               <li key={ i } className="border-b border-neutral-800 sm:border-none text-center pb-4 sm:pb-0 w-full sm:w-auto">
-                <a href="/">{ link }</a>
+                <HashLink className="text-neutral-400 hover:text-neutral-100" to={ link.url } scroll={ e => scrollAdjusted(e) } onClick={ () => setOpen(false) }>{ link.title }</HashLink>
               </li>  
             )) }
           </ul>

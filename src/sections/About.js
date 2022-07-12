@@ -2,7 +2,7 @@ import AboutImg from '../resources/images/about.jpg'
 
 const About = () => (
   <section>
-    <div className="relative flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 xl:gap-20 bg-neutral-800 rounded-lg md:rounded-xl xl:rounded-3xl w-full p-6 md:p-8 xl:p-12">
+    <div id="about" className="relative flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 xl:gap-20 bg-neutral-800 rounded-lg md:rounded-xl xl:rounded-3xl w-full p-6 md:p-8 xl:p-12">
       <div className="w-full md:w-1/2">
         <img className="w-full h-[50vh] object-cover rounded-lg md:rounded-xl xl:rounded-3xl" src={ AboutImg } alt="Мое фото" />
       </div>

@@ -1,7 +1,7 @@
 import HeroImg from '../resources/images/hero.png'
 
 const Hero = () => (
-  <section className="flex flex-col md:flex-row justify-between items-center gap-6">
+  <section id="hero" className="flex flex-col md:flex-row justify-between items-center gap-6">
     <div className="flex flex-col items-start gap-6 xl:gap-8 w-full md:w-2/3">
       <h2 className="text-3xl lg:text-5xl 2xl:text-6xl">Разработка адаптивных лендингов за <span className="text-emerald-600">$50</span></h2>
       <p className="text-base 2xl:text-xl">
