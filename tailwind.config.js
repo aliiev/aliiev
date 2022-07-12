@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'display': [ 'Finlandica', defaultTheme.fontFamily.sans ],
-        'body': [ 'Andika', defaultTheme.fontFamily.serif ]
+        'body': [ 'Inter', defaultTheme.fontFamily.serif ]
       }
     },
   },
