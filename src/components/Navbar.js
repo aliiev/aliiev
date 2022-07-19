@@ -63,7 +63,7 @@ const Navbar = () => {
 
           {/* BUTTON */}
           <div className="w-full sm:w-auto px-6 sm:px-0">
-            <HashLink className="btn bg-emerald-600 block sm:hidden lg:block" to="/#contacts" scroll={ e => scrollAdjusted(e) } onClick={ () => setOpen(false) }>Написать мне</HashLink>
+            <HashLink className="btn bg-emerald-600 hover:bg-emerald-700 block sm:hidden lg:block" to="/#contacts" scroll={ e => scrollAdjusted(e) } onClick={ () => setOpen(false) }>Написать мне</HashLink>
           </div>
           
         </div>

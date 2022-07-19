@@ -22,6 +22,10 @@
     @apply tracking-wide;
   }
 
+  a {
+    @apply transition-colors;
+  }
+
   p {
     @apply text-neutral-300;
   }
@@ -30,6 +34,7 @@
 @layer components {
   .btn {
     @apply rounded-md;
+    @apply outline-none;
     @apply text-sm;
     @apply 2xl:text-base;
     @apply text-center;
@@ -38,6 +43,16 @@
     @apply md:w-auto;
     @apply px-6;
     @apply py-2.5;
+
+    @apply hover:bg-emerald-700;
+    @apply hover:border-transparent;
+    
+    @apply focus:bg-emerald-700;
+    @apply focus:border-transparent;
+    @apply focus:ring-4;
+    @apply focus:ring-emerald-600;
+
+    @apply transition-all;
   }
 
   .input {
@@ -48,6 +63,10 @@
     @apply placeholder:text-neutral-500;
     @apply text-left;
     @apply px-4;
+    
+    @apply hover:bg-neutral-900;
+    @apply hover:border-neutral-800;;
+    @apply focus:bg-neutral-800;
   }
 
   .input-file {
