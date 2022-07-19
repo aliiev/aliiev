@@ -62,16 +62,13 @@
     @apply border-neutral-800;
     @apply placeholder:text-neutral-500;
     @apply text-left;
+    @apply w-full;
     @apply px-4;
     
+    @apply autofill:bg-neutral-900;
     @apply hover:bg-neutral-900;
     @apply hover:border-neutral-800;;
     @apply focus:bg-neutral-800;
-  }
-
-  .input-file {
-    @apply input;
-    @apply text-neutral-500;
   }
 
   .card {

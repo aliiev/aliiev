@@ -1,3 +1,20 @@
+import { Formik, Form, Field } from 'formik'
+import * as Yup from 'yup'
+
+const FormSchema = Yup.object().shape({
+  name: Yup.string()
+    .min(3, 'Длина имени должна быть больше 2 символов')
+    .max(50, 'Длина имени должна быть меньше 50 символов')
+    .required('Обязательное поле'),
+  email: Yup.string()
+    .email('Пожалуйста, введите корректный email-адрес')
+    .required('Обязательное поле'),
+  message: Yup.string()
+    .min(2, 'Длина сообщения должна быть больше 2 символов')
+    .max(500, 'Длина сообщения должна быть меньше 500 символов')
+    .required('Обязательное поле')
+})
+
 const Contacts = () => (
   <section id="contacts" className="gggyrate border-y border-neutral-800 p-v p-h">
     <div className="flex flex-col md:flex-row justify-between items-center gap-8">
@@ -26,13 +43,29 @@ const Contacts = () => (
         <p className="text-sm md:text-base mt-1 mb-4">
           Ваше сообщение будет напрямую отправлено мне и я обязательно отвечу Вам в самое ближайшее время.
         </p>
-        <form className="flex flex-col justify-between items-stretch gap-4">
-          <input className="input" type="text" placeholder="Ваше имя" />
-          <input className="input" type="email" placeholder="Ваш email" />
-          <textarea className="input resize-none" placeholder="Ваше сообщение"></textarea>
-          <input className="input-file" type="file" />
-          <button className="btn bg-emerald-600 disabled:cursor-not-allowed" disabled>Отправить</button>
-        </form>
+        <Formik
+          initialValues={{ name: '', email: '', message: '' }}
+          validationSchema={ FormSchema }
+          onSubmit={ values => console.log(values) }
+        >
+          {({ errors, touched, isSubmitting }) => (
+            <Form className="flex flex-col justify-between items-stretch gap-4">
+              <div>
+                <Field className="input" name="name" placeholder="Ваше имя" />
+                { errors.name && touched.name && <small className="text-xs text-neutral-500">{ errors.name }</small> }
+              </div>
+              <div>
+                <Field className="input" name="email" type="email" placeholder="Ваш email" />
+                { errors.email && touched.email && <small className="text-xs text-neutral-500">{ errors.email }</small> }
+              </div>
+              <div>
+                <Field className="input resize-none" name="message" as="textarea" rows="4" placeholder="Ваше сообщение" />
+                { errors.message && touched.message && <small className="text-xs text-neutral-500">{ errors.message }</small> }
+              </div>
+              <button className="btn bg-emerald-600 disabled:bg-emerald-700 disabled:cursor-not-allowed" type="submit" disabled={ isSubmitting }>{ !isSubmitting ? 'Отправить' : 'Сообщение отправлено!'  }</button>
+            </Form>
+          )}
+        </Formik>
       </div>
     </div>
   </section>
