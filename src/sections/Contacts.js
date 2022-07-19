@@ -24,13 +24,13 @@ const Contacts = () => (
       <div className="bg-neutral-900 border border-neutral-800 rounded-xl w-full md:w-2/3 p-6">
         <h4 className="text-xl lg:text-3xl">Напишите мне</h4>
         <p className="text-sm md:text-base mt-1 mb-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quo earum in impedit doloribus corrupti sed quia labore porro? Natus, sequi earum deleniti enim animi. Maxime dolore voluptate animi laborum!
+          Ваше сообщение будет напрямую отправлено мне и я обязательно отвечу Вам в самое ближайшее время.
         </p>
         <form className="flex flex-col justify-between items-stretch gap-4">
           <input className="input" type="text" placeholder="Ваше имя" />
           <input className="input" type="email" placeholder="Ваш email" />
           <textarea className="input resize-none" placeholder="Ваше сообщение"></textarea>
-          <input className="input-file" type="file" placeholder="Ваш email" />
+          <input className="input-file" type="file" />
           <button className="btn bg-emerald-600 disabled:cursor-not-allowed" disabled>Отправить</button>
         </form>
       </div>

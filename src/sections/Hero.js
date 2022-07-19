@@ -18,9 +18,9 @@ const Hero = () => {
       <div className="absolute ccchaos w-96 h-96 top-0 left-0 scale-150 opacity-60 -translate-x-1/3 -translate-y-1/3"></div>
       
       <div className="relative flex flex-col items-start gap-6 xl:gap-8 w-full md:w-2/3">
-        <h2 className="text-3xl lg:text-5xl 2xl:text-6xl">Разработка адаптивных лендингов за <span className="text-emerald-600">$50</span></h2>
+        <h2 className="text-3xl lg:text-5xl 2xl:text-6xl">Разработка адаптивных лендингов за <span className="text-emerald-600">$100</span></h2>
         <p className="text-base 2xl:text-xl">
-          Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Eius, aliquam! Vero, ratione cum quas neque sint sequi nam officiis doloremque nostrum eos alias veritatis quasi dicta voluptate adipisci, qui accusantium!
+          Лендинг можно считать парадной дверью вашего бизнеса, через которую входит потенциальный клиент. Ваша страница приветствует посетителя и отвечает на все его вопросы о вашей деятельности, представляет Ваше решение для реализации вопросов клиента.
         </p>
         <HashLink className="btn bg-emerald-600" to="/#contacts" scroll={ e => scrollAdjusted(e) }>Написать мне</HashLink>
       </div>
