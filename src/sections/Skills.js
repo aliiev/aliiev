@@ -3,11 +3,11 @@ import CssIcon from '../resources/icons/css.svg'
 import JsIcon from '../resources/icons/js.svg'
 import ReactIcon from '../resources/icons/react.svg'
 import ReduxIcon from '../resources/icons/redux.svg'
+import NextjsIcon from '../resources/icons/nextjs.svg'
 import GulpIcon from '../resources/icons/gulp.svg'
 import PugIcon from '../resources/icons/pug.svg'
 import SassIcon from '../resources/icons/sass.svg'
 import TailwindcssIcon from '../resources/icons/tailwindcss.svg'
-import PhotoshopIcon from '../resources/icons/photoshop.svg'
 import IllustratorIcon from '../resources/icons/illustrator.svg'
 import FigmaIcon from '../resources/icons/figma.svg'
 
@@ -27,6 +27,9 @@ const skills = [{
   title: 'Redux',
   icon: ReduxIcon
 }, {
+  title: 'Next.js',
+  icon: NextjsIcon
+}, {
   title: 'Tailwindcss',
   icon: TailwindcssIcon
 }, {
@@ -39,14 +42,11 @@ const skills = [{
   title: 'Sass',
   icon: SassIcon
 }, {
-  title: 'Adobe Photoshop',
-  icon: PhotoshopIcon
-}, {
-  title: 'Adobe Illustrator',
-  icon: IllustratorIcon
-}, {
   title: 'Figma',
   icon: FigmaIcon
+}, {
+  title: 'Illustrator',
+  icon: IllustratorIcon
 }, ]
 
 const Skills = () => (
