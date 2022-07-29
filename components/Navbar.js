@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '../public/resources/Logo.svg'
 
@@ -28,9 +29,11 @@ export default function Navbar() {
         
         {/* LOGO AND TOGGLER */}
         <div className="flex justify-between items-center shrink-0 w-full sm:w-auto">
-          <a className="relative w-28 h-10" href="/">
-            <Image layout="fill" src={ Logo } alt="Aliiev" />
-          </a>
+          <Link href="/">
+            <a className="relative w-28 h-10">
+              <Image layout="fill" src={ Logo } alt="Aliiev" />
+            </a>
+          </Link>
           <button className="sm:hidden" onClick={ () => setOpen(!isOpen) }>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={ 2 }>
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
@@ -52,7 +55,9 @@ export default function Navbar() {
 
           {/* BUTTON */}
           <div className="w-full sm:w-auto px-6 sm:px-0">
-            <a className="btn bg-emerald-600 hover:bg-emerald-700 block sm:hidden lg:block" href="/#contacts" onClick={ () => setOpen(false) }>Написать мне</a>
+            <Link href="/#contacts">
+              <a className="btn bg-emerald-600 hover:bg-emerald-700 block sm:hidden lg:block" onClick={ () => setOpen(false) }>Написать мне</a>
+            </Link>
           </div>
           
         </div>
