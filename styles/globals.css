@@ -50,18 +50,18 @@
   }
 
   .oooscillate {
-    @apply bg-[url('../public/resources/decorators/oooscillate.svg')] bg-no-repeat bg-cover;
+    @apply bg-[url('/resources/decorators/oooscillate.svg')] bg-no-repeat bg-cover;
   }
 
   .bbblurry {
-    @apply bg-[url('../public/resources/decorators/bbblurry.svg')] bg-no-repeat bg-contain;
+    @apply bg-[url('/resources/decorators/bbblurry.svg')] bg-no-repeat bg-contain;
   }
 
   .gggyrate {
-    @apply bg-[url('../public/resources/decorators/gggyrate.svg')] bg-center bg-no-repeat bg-cover;
+    @apply bg-[url('/resources/decorators/gggyrate.svg')] bg-center bg-no-repeat bg-cover;
   }
 
   .ccchaos {
-    @apply bg-[url('../public/resources/decorators/ccchaos.svg')] bg-no-repeat;
+    @apply bg-[url('/resources/decorators/ccchaos.svg')] bg-no-repeat;
   }
 }
