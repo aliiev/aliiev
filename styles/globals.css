@@ -1,26 +1,67 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Finlandica:wght@700&display=swap');
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   html {
     color-scheme: dark;
   }
+
   body {
-    color: white;
-    background: black;
+    @apply bg-neutral-900 text-neutral-100 font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold uppercase tracking-wide;
+  }
+
+  a {
+    @apply transition-colors cursor-pointer;
+  }
+
+  p {
+    @apply text-neutral-300;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply rounded-md outline-none text-sm 2xl:text-base text-center font-medium w-full md:w-auto px-6 py-2.5 hover:bg-emerald-700 hover:border-transparent focus:bg-emerald-700 focus:border-transparent focus:ring-4 focus:ring-emerald-600 transition-all;
+  }
+
+  .input {
+    @apply btn bg-neutral-900 border-2 border-neutral-800 placeholder:text-neutral-500 text-left w-full px-4 autofill:bg-neutral-900 hover:bg-neutral-900 hover:border-neutral-800 focus:bg-neutral-800;
+  }
+
+  .card {
+    @apply relative flex flex-col sm:flex-row lg:flex-col items-start sm:items-center lg:items-start gap-3 sm:gap-6 lg:gap-3 bg-neutral-800 backdrop-blur bg-opacity-60 rounded-lg md:rounded-xl p-6;
+  }
+}
+
+@layer utilities {
+  .p-h {
+    @apply px-6 sm:px-10 lg:px-20 xl:px-40;
+  }
+
+  .p-v {
+    @apply py-6 md:py-12 2xl:py-20;
+  }
+
+  .oooscillate {
+    @apply bg-[url('../public/resources/decorators/oooscillate.svg')] bg-no-repeat bg-cover;
+  }
+
+  .bbblurry {
+    @apply bg-[url('../public/resources/decorators/bbblurry.svg')] bg-no-repeat bg-contain;
+  }
+
+  .gggyrate {
+    @apply bg-[url('../public/resources/decorators/gggyrate.svg')] bg-center bg-no-repeat bg-cover;
+  }
+
+  .ccchaos {
+    @apply bg-[url('../public/resources/decorators/ccchaos.svg')] bg-no-repeat;
   }
 }
